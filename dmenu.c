@@ -761,6 +761,10 @@ main(int argc, char *argv[])
 		else
 			usage();
 
+  if (prompt == NULL) {
+    prompt = "run >";
+  }
+
 	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
 		fputs("warning: no locale support\n", stderr);
 	if (!(dpy = XOpenDisplay(NULL)))
